@@ -1,61 +1,77 @@
 package com.hpm.blog.model;
 
-/**
- * 城市实体类
- *
- * Created by bysocket on 07/02/2017.
- */
-public class City {
+import javax.persistence.*;
 
-    /**
-     * 城市编号
-     */
+@Table(name = "City")
+public class City {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    /**
-     * 省份编号
-     */
+    @Column(name = "province_id")
     private Long provinceId;
 
-    /**
-     * 城市名称
-     */
+    @Column(name = "city_name")
     private String cityName;
 
-    /**
-     * 描述
-     */
     private String description;
 
+    /**
+     * @return id
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * @param id
+     */
     public void setId(Long id) {
         this.id = id;
     }
 
+    /**
+     * @return province_id
+     */
     public Long getProvinceId() {
         return provinceId;
     }
 
+    /**
+     * @param provinceId
+     */
     public void setProvinceId(Long provinceId) {
         this.provinceId = provinceId;
     }
 
+    /**
+     * @return city_name
+     */
     public String getCityName() {
         return cityName;
     }
 
+    /**
+     * @param cityName
+     */
     public void setCityName(String cityName) {
         this.cityName = cityName;
     }
 
+    /**
+     * @return description
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * @param description
+     */
     public void setDescription(String description) {
         this.description = description;
     }
+
+
 }

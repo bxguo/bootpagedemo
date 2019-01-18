@@ -1,9 +1,13 @@
 package com.hpm.blog.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.hpm.blog.model.City;
 import com.hpm.blog.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class CityRestController {
@@ -11,9 +15,32 @@ public class CityRestController {
     @Autowired
     private CityService cityService;
 
+    /**
+     * name
+     */
     @RequestMapping(value = "/api/city", method = RequestMethod.GET)
-    public City findOneCity(@RequestParam(value = "cityName") String cityName) {
+    public List<City> findOneCity(@RequestParam(value = "cityName") String cityName) {
         return cityService.findCityByName(cityName);
+    }
+
+    /**
+     * 所有
+     * @return
+     */
+    @RequestMapping(value = "/api/all", method = RequestMethod.GET)
+    public List<City> findAll() {
+        return cityService.findAll();
+    }
+    /**
+     * 分页
+     * @return
+     */
+    @GetMapping("/api/page")
+    public PageInfo<City> findPage(@RequestParam(defaultValue = "1") int pageNo
+            ,@RequestParam(defaultValue = "1") int pageSize) {
+        PageHelper.startPage(pageNo,pageSize);
+        PageInfo<City> pageInfo = new PageInfo<>(cityService.findCitys(new City()));
+        return pageInfo;
     }
 
     /**
