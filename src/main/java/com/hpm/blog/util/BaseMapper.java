@@ -1,4 +1,4 @@
-package com.hpm.blog.mapper;
+package com.hpm.blog.util;
 
 import tk.mybatis.mapper.common.ConditionMapper;
 import tk.mybatis.mapper.common.ExampleMapper;

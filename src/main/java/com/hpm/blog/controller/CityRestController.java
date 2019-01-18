@@ -36,8 +36,8 @@ public class CityRestController {
      * @return
      */
     @GetMapping("/api/page")
-    public PageInfo<City> findPage(@RequestParam(defaultValue = "1") int pageNo
-            ,@RequestParam(defaultValue = "1") int pageSize) {
+    public PageInfo<City> findPage(@RequestParam(value = "pageNo") int pageNo
+            ,@RequestParam(value = "pageSize") int pageSize) {
         PageHelper.startPage(pageNo,pageSize);
         PageInfo<City> pageInfo = new PageInfo<>(cityService.findCitys(new City()));
         return pageInfo;

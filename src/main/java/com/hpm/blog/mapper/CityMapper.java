@@ -1,9 +1,9 @@
 package com.hpm.blog.mapper;
 
 
-import com.github.pagehelper.Page;
 import com.hpm.blog.model.City;
+import com.hpm.blog.util.BaseMapper;
 
-public interface CityMapper extends BaseMapper {
+public interface CityMapper extends BaseMapper<City> {
 
 }
