@@ -1,4 +1,4 @@
-package com.hpm.blog.model;
+package com.zysl.demo.spring.model;
 
 import javax.persistence.*;
 

@@ -5,5 +5,5 @@ spring.datasource.password=
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 
 ## Mybatis 配置
-mybatis.typeAliasesPackage=com.hpm.blog.model
+mybatis.typeAliasesPackage=com.zysl.demo.spring.model
 mybatis.mapperLocations=classpath:mapper/*.xml

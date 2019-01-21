@@ -1,9 +1,9 @@
-package com.hpm.blog.service.impl;
+package com.zysl.demo.spring.service.impl;
 
-import com.github.pagehelper.Page;
-import com.hpm.blog.mapper.CityMapper;
-import com.hpm.blog.model.City;
-import com.hpm.blog.service.CityService;
+import com.zysl.demo.spring.mapper.CityMapper;
+import com.zysl.demo.spring.model.City;
+import com.zysl.demo.spring.service.CityService;
+import com.zysl.demo.spring.service.base.BaseCityServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,11 +13,7 @@ import java.util.List;
  * 城市业务逻辑实现类
  */
 @Service
-public class CityServiceImpl implements CityService {
-
-    @Autowired
-    private CityMapper cityMapper;
-
+public class CityServiceImpl extends BaseCityServiceImpl implements CityService {
 
     @Override
     public List<City> findCityByName(String cityName) {

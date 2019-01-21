@@ -1,9 +1,9 @@
-package com.hpm.blog.controller;
+package com.zysl.demo.spring.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.hpm.blog.model.City;
-import com.hpm.blog.service.CityService;
+import com.zysl.demo.spring.model.City;
+import com.zysl.demo.spring.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

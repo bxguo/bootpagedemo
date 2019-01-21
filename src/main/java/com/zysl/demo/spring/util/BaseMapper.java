@@ -1,4 +1,4 @@
-package com.hpm.blog.util;
+package com.zysl.demo.spring.util;
 
 import tk.mybatis.mapper.common.ConditionMapper;
 import tk.mybatis.mapper.common.ExampleMapper;

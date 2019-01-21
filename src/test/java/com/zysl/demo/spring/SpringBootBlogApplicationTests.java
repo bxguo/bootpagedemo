@@ -1,4 +1,4 @@
-package com.hpm.blog;
+package com.zysl.demo.spring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
